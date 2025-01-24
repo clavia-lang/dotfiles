@@ -1,4 +1,4 @@
-function initialize()
+local function initialize()
 	local rocks_path = vim.fs.joinpath(vim.fn.stdpath("data"), "rocks")
 
 	local luarocks_path = {
@@ -16,7 +16,7 @@ function initialize()
 	vim.opt.runtimepath:append(vim.fs.joinpath(rocks_path, "lib", "luarocks", "rocks-5.1", "rocks.nvim", "*"))
 end
 
-function install()
+local function install()
 	if not pcall(require, "rocks") then
 		local rocks_path = vim.fs.joinpath(vim.fn.stdpath("cache"), "rocks.nvim")
 
@@ -34,3 +34,14 @@ end
 
 initialize()
 install()
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(event)
+		local bufmap = function(mode, lhs, rhs)
+			local opts = { buffer = event.buf }
+			vim.keymap.set(mode, lhs, rhs, opts)
+		end
+
+		bufmap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
+	end,
+})

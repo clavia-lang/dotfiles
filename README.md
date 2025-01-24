@@ -7,6 +7,7 @@ Language | Language Server                      | Installation
 -------- | ------------------------------------ | ------------------------------
 C/C++    | [clangd]                             | [Installation][install_clangd]
 Lua      | [lua-language-server][luals]         | [Installation][install_luals]
+Python   | [pyright]                            | [Installation][install_pyright]
 Rust     | [rust-analyzer][rls2]                | [Installation][install_rls2]
 Java     | [Eclipse JDT Language Server][jdtls] | [Installation][install_jdtls]
 
@@ -14,6 +15,8 @@ Java     | [Eclipse JDT Language Server][jdtls] | [Installation][install_jdtls]
 [install_clangd]: https://clangd.llvm.org/installation#installing-clangd
 [luals]: https://github.com/LuaLS/lua-language-server
 [install_luals]: https://luals.github.io/#neovim-install
+[pyright]: https://github.com/microsoft/pyright
+[install_pyright]: https://microsoft.github.io/pyright/#/installation
 [rls2]: https://github.com/rust-lang/rust-analyzer
 [install_rls2]: https://rust-analyzer.github.io/manual.html#installation
 [jdtls]: https://github.com/eclipse-jdtls/eclipse.jdt.ls

@@ -15,6 +15,13 @@ tree-sitter-cpp = "0.0.35"
 tree-sitter-rust = "0.0.38"
 tree-sitter-java = "0.0.37"
 tree-sitter-lua = "0.0.32"
+tree-sitter-python = "0.0.37"
+
+"kanagawa.nvim" = "scm"
+
+[plugins.neovim-wakatime]
+git = "alanhamlett/neovim-wakatime"
+config = true
 
 [plugins.nvim-treesitter]
 git = "nvim-treesitter/nvim-treesitter"
