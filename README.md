@@ -12,3 +12,19 @@ Nushell中用fish的`complete`命令提供自动补全。
 ```console
 $ pacman -S fish
 ```
+
+## Neovim
+
+```console
+$ pacman -S git
+```
+
+语言  | 语言伺服器
+----- | -------------
+C/C++ | clangd
+Rust  | rust-analyzer
+Zig   | ZLS 
+
+```console
+$ pacman -S clangd rust-analyzer zls
+```
