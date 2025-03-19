@@ -31,3 +31,14 @@ $env.config.completions = {
          completer: $external_completer
      }
 }
+
+if ($env.ZELLIJ? | is-empty) {
+    if ($env.ZELLIJ_AUTO_ATTACH? == "true") {
+        zellij attach -c
+    } else {
+        zellij
+    }
+    if ($env.ZELLIJ_AUTO_EXIT? == "true") {
+        exit
+    }
+}
